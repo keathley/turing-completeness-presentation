@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js - The HTML Presentation Framework</title>
+		<meta name="description" content="A talk about finding happiness in programming">
+		<meta name="author" content="Chris Keathley">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Finding happiness in Turing Completeness</h1>
+					<p>
+						<small>
+							<a href="http://keathley.io">Chris Keathley</a> /
+							<a href="http://twitter.com/ChrisKeathley">@keathley</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h1>Welcome back</h1>
+					<img src="images/welcome.gif" alt="">
+				</section>
+				<section>
+					<h1>I wanted to make games</h1>
+				</section>
+				<section>
+					<!-- I wanted to be like this kid -->
+					<img src="images/basic.jpg" alt="">
+				</section>
+				<section>
+					<!-- Really I was more like this kid -->
+					<img src="images/newb.jpg" alt="">
+				</section>
+				<section>
+					<h1>C++</h1>
+				</section>
+				<section>
+					<h1>Notepad</h1>
+				</section>
+				<section>
+					<h1>Nothing got done</h1>
+				</section>
+				<section>
+					<!-- I'd heard this guy say real artists ship -->
+					<img src="images/steve-jobs.jpg" alt="">
+					<blockquote>
+						"Real artists ship"
+					</blockquote>
+				</section>
+				<section>
+					<!-- Then I found this (RPG MAKER) -->
+					<img src="images/rpgmaker.gif" alt="">
+				</section>
+				<section>
+					<!-- and when I got it working I felt like this -->
+					<img src="images/matrix.jpeg" alt="">
+				</section>
+				<section>
+					<h1>And then...</h1>
+				</section>
+				<section>
+					<!-- until I showed some people and they said that this -->
+					<blockquote>
+						"You should really be using C++"
+					</blockquote>
+				</section>
+				<section>
+					<img src="images/rage.gif" alt="">
+				</section>
+				<section>
+					<h1>I don't like C++ because it's not fun</h1>
+				</section>
+				<section>
+					<h1>I just want to build cool games</h1>
+				</section>
+				<section>
+					<h1>Sound familiar?</h1>
+				</section>
+				<section>
+					<h1>Go / Python</h1>
+				</section>
+				<section>
+					<h1>Python / Ruby</h1>
+				</section>
+				<section>
+					<h1>Java / Ruby</h1>
+				</section>
+				<section>
+					<h1>Node / io.js</h1>
+				</section>
+				<section>
+					<img src="images/farewell_node.png" alt="">
+				</section>
+				<section>
+					<h1>This is ridiculous</h1>
+				</section>
+				<section>
+					<!-- In the 30s there was a really smart guy named Alan Turing -->
+					<img src="images/Alan_Turing.jpg" alt="">
+				</section>
+				<section>
+					<!-- At the time computers looked less like this -->
+					<img src="images/gaming_rig.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/early_computers.jpg" alt="">
+				</section>
+				<section>
+					<!-- They didn't even look like this yet -->
+					<img src="images/Eniac.jpg" alt="">
+				</section>
+				<section>
+					<h1>Computer == Human</h1>
+				</section>
+				<section>
+					<!-- This is what Turing wanted to Solve -->
+					<img src="images/Alan_Turing.jpg" alt="">
+				</section>
+				<section>
+					<h1>Turing Machine</h1>
+				</section>
+				<section>
+					<h1>His Machine</h1>
+					<ul>
+						<li>A strip of tape you can write numbers on (1, 0)</li>
+						<li>A Tape head to read and write to the tape</li>
+						<li>An internal set of rules and states</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Operations</h1>
+					<ul>
+						<li>Read input data</li>
+						<li>write on the current cell</li>
+						<li>change state</li>
+						<li>move left or right</li>
+					</ul>
+				</section>
+				<section>
+					<h1>_101[1]__</h1>
+					<p>write 0, move left</p>
+				</section>
+				<section>
+					<h1>__10[1]0_</h1>
+					<p>write 0, move left</p>
+				</section>
+				<section>
+					<h1>___1[0]00</h1>
+					<p>write 1, move right, go to state 2</p>
+				</section>
+				<section>
+					<h1>__11[0]0_</h1>
+					<p>move right</p>
+				</section>
+				<section>
+					<h1>_110[0]__</h1>
+					<p>move right</p>
+				</section>
+				<section>
+					<h1>1100[_]__</h1>
+					<p>move left, go to state 3</p>
+				</section>
+				<section>
+					<h1>_110[0]__</h1>
+					<p>done</p>
+				</section>
+				<section>
+					<h1>Deterministic</h1>
+					<p>You can only have one rule for each combination and state pair</p>
+				</section>
+				<section>
+					<!-- So he built something like that looked like this -->
+					<iframe width="560" height="315" src="//www.youtube.com/embed/E3keLeMwfHY" frameborder="0" allowfullscreen></iframe>
+				</section>
+				<section>
+					<h1>But there is a problem</h1>
+				</section>
+				<section>
+					<h1>Rules are built into the machine</h1>
+				</section>
+				<section>
+					<h1>We need a Turing machine for Turing machines</h1>
+				</section>
+				<section>
+					<img height="600" src="images/inception.jpg" alt="">
+				</section>
+				<section>
+					<h1>A Universal Turing Machine</h1>
+				</section>
+				<section>
+					<h1>Programming languages are Turing machines</h1>
+				</section>
+				<section>
+					<h1>Anything you can do in one language you can do in another</h1>
+				</section>
+				<section>
+					<h1>But there's another problem (sorta)</h1>
+				</section>
+				<section>
+					<h1>
+						All Enhancements can be simulated
+					</h1>
+				</section>
+				<section>
+					<h1>
+						Which means that the Turing Machine is as powerful as it gets
+					</h1>
+				</section>
+				<section>
+					<img src="images/more_power.jpeg" alt="">
+				</section>
+				<section>
+					<h1>Programming languages have the same limits</h1>
+				</section>
+				<section>
+					<img src="images/sad_kitten.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/awesome.jpeg" alt="">
+				</section>
+				<section>
+					<h1>Powerful != Useful</h1>
+				</section>
+				<section>
+					<h1>Languages can be designed to fit certain needs</h1>
+				</section>
+				<section>
+					<img height="300" src="images/matz.JPG" alt="">
+					<blockquote>
+						“I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language”
+					</blockquote>
+				</section>
+				<section>
+					<img height="300" src="images/larry_wall.jpg" alt="">
+					<blockquote>
+						"Easy things should be easy and hard things should be possible"
+					</blockquote>
+				</section>
+				<section>
+					<!-- I'd heard this guy say real artists ship -->
+					<img src="images/steve-jobs.jpg" alt="">
+					<blockquote>
+						"Real artists ship"
+					</blockquote>
+				</section>
+				<section>
+					<!-- Andy Warhol  -->
+					<img height="300" src="images/warhol.jpg" alt="">
+					<blockquote>
+						“Making money is art and working is art and good business is the best art.”
+					</blockquote>
+				</section>
+				<section>
+					<h1>Go / Python</h1>
+				</section>
+				<section>
+					<h1>Python / Ruby</h1>
+				</section>
+				<section>
+					<h1>Java / Ruby</h1>
+				</section>
+				<section>
+					<h1>Node / io.js</h1>
+				</section>
+				<section>
+					<h1>Bullshit</h1>
+				</section>
+				<section>
+					<h1>Use what you love</h1>
+				</section>
+				<section>
+					<h1>Build sweet software</h1>
+				</section>
+				<section>
+					<h1>Share it with other people</h1>
+				</section>
+				<section>
+					<h1>Thanks</h1>
+					<h3>Chris Keathley / keathley.io</h3>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
